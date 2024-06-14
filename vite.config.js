@@ -15,7 +15,8 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api/user' : "https://hello.zero65.in",
+      // '/api/user' : "", //"https://hello.zero65.in"
+      '/api' : { target: "http://localhost:8080", rewrite: path => path.replace('/api/', '/') },
     }
   }
 })
