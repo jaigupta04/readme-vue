@@ -1,6 +1,6 @@
 {
   "name": "readme-vue",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Hello Vue3 App",
   "private": true,
   "scripts": {
