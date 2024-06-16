@@ -16,7 +16,7 @@ export default defineConfig({
   server: {
     proxy: {
       // '/api/user' : "", //"https://hello.zero65.in"
-      '/api' : { target: "http://localhost:8080", rewrite: path => path.replace('/api/', '/') },
+      '/api' : { target: "https://readme-37zstzcle-jai-guptas-projects.vercel.app", rewrite: path => path.replace('/api/', '/') },
     }
   }
 })
