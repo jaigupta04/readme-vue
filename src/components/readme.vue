@@ -42,6 +42,20 @@
 
     </v-form>
   </v-card-text>
+
+  <v-dialog v-model="dialog" max-width="500px">
+      <v-card>
+        <v-card-title class="headline">Response</v-card-title>
+        <v-card-text>
+          <pre>{{ response }}</pre>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="primary" text @click="dialog = false">Close</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
   </v-card>
 </template>
 
@@ -60,6 +74,8 @@ export default {
       repoName: null,
       branchName: null,
       fileName: null,
+      dialog: false,
+      response: ''
     };
   },
 
@@ -76,6 +92,9 @@ export default {
         branchName: this.branchName,
         fileName: this.fileName,
       });
+
+      this.response = resp;
+      this.dialog = true;
     },
   },
 };
