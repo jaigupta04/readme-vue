@@ -1,11 +1,11 @@
 <template>
   <main>
-    <Readme :doGet="doGet" :doPost="doPost" api="/"/>
+    <Readme :doGet="doGet" :doPost="doPost" api="/" />
   </main>
 </template>
 
 <script>
-import Readme from '../components/readme.vue'
+import Readme from '../components/readme.vue';
 
 export default {
   components: {
@@ -19,6 +19,6 @@ export default {
 
   data() {
     return {};
-  },
+  }
 }
 </script>
