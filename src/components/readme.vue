@@ -59,7 +59,10 @@
   </v-card>
 </template>
 
+
+
 <script>
+
 export default {
 
   props: {
@@ -98,7 +101,10 @@ export default {
     },
   },
 };
+
 </script>
+
+
 
 <style scoped>
 
@@ -128,4 +134,5 @@ export default {
   color: white;
   font-weight: bold;
 }
+
 </style>

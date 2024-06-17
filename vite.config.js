@@ -1,9 +1,7 @@
-import { fileURLToPath, URL } from 'node:url'
+import { fileURLToPath, URL } from 'node:url';
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
@@ -15,8 +13,11 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      // '/api/user' : "", //"https://hello.zero65.in"
-      '/api' : { target: "https://readme-37zstzcle-jai-guptas-projects.vercel.app", rewrite: path => path.replace('/api/', '/') },
+      '/api': {
+        target: 'https://readme-jai-guptas-projects.vercel.app',
+        changeOrigin: true,
+        rewrite: (path) => path.replace('/api/', '/')
+      },
     }
   }
-})
+});
